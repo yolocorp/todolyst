@@ -1,12 +1,12 @@
 # Node modules
-#node_todo/node_modules/
-#vuejs_todo/node_modules/
+/node_todo/node_modules/*
+/vuejs_todo/node_modules/*
 
 # Build
-#node_todo/build/
-#vuejs_todo/build/
+/node_todo/build/*
+/vuejs_todo/build/*
 
 # IDE
-#node_todo/.idea
-#vuejs_todo/.idea
+/node_todo/.idea/*
+/vuejs_todo/.idea/*
 
