@@ -4,7 +4,7 @@
       <todo v-for="(todo, key) in todos" :task="todo.task" :status="todo.status" :key="todo.key"></todo>
     </div>
     <div v-else>
-      No todo found yet !
+      Add some todo
     </div>
     <div class="row">
       <router-link :to="{ name: 'AddTodo' }" class="btn-floating btn-large waves-effect waves-light green">
