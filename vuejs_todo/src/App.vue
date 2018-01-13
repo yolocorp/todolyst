@@ -30,6 +30,10 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+  }
+
+  main {
+    min-height: 200px;
+    margin: 50px auto;
   }
 </style>

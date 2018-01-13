@@ -1,7 +1,16 @@
 <template>
   <div>
     <div v-if="todos.length > 0">
-      <todo v-for="(todo, key) in todos" :task="todo.task" :status="todo.status" :key="todo.key"></todo>
+      <ul class="collection">
+        <todo
+          v-for="(todo, key) of todos"
+          :key="todo.id"
+          :task="todo.task"
+          :status="todo.status"
+          :id="todo.id"
+          v-on:delete-todo="deleteTodo(key)">
+        </todo>
+      </ul>
     </div>
     <div v-else>
       Add some todo
@@ -29,6 +38,12 @@
     components: {
       todo
     },
+    methods: {
+      deleteTodo (key) {
+        this.todos.splice(key, 1)
+        console.log(key)
+      }
+    },
     created () {
       axios.get('http://localhost:3000/todos', { withCredentials: true })
         .then(response => {
@@ -40,3 +55,9 @@
     }
   }
 </script>
+
+<style>
+  .btn-floating {
+    margin-top: 20px;
+  }
+</style>

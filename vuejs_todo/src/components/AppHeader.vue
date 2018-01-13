@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>ToDo App</h1>
+    <h1>Todolyst</h1>
   </header>
 </template>
 

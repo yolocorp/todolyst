@@ -68,7 +68,7 @@ exports.delete_todo = function(req, res) {
                 break;
             }
         }
-        if(index) {
+        if(index != undefined) {
             req.session.todos.splice(index, 1);
             res.json("Deleted.");
         }

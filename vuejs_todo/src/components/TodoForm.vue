@@ -14,6 +14,7 @@
 
 <script>
   import axios from 'axios'
+
   export default {
     name: 'todoForm',
     data () {
@@ -39,3 +40,9 @@
     }
   }
 </script>
+
+<style>
+  form {
+    padding: 1000px auto;
+  }
+</style>

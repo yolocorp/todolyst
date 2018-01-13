@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h2>Your todos</h2>
     <todos></todos>
   </div>
 </template>
