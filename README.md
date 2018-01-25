@@ -1,7 +1,7 @@
 # Todolyst by YoLocorp
 'One page' todo liste, comprenant :
--Les opérations CRUD
--Une pagination des ToDos
+- Les opérations CRUD
+- Une pagination des ToDos
 
 Développée grâce à Nodejs pour le back, et Vuejs en front.
 Mis en page avec Materialize.
