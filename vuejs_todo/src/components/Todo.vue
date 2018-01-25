@@ -6,11 +6,11 @@
           {{ task }}
         </router-link>
       </span>
-      <router-link :to="{name: 'Home'}" exact v-on:click.native="deleteTodo()" class="secondary-content" id="deleteButton">
-        <i class="fa fa-minus" aria-hidden="true"></i>
+      <router-link :to="{name: 'Update', params: { id: this.id }}" class="secondary-content" id="deleteButton">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
       </router-link>
       <router-link :to="{name: 'Home'}" exact v-on:click.native="deleteTodo()" class="secondary-content" id="updateButton">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <i class="fa fa-minus" aria-hidden="true"></i>
       </router-link>
     </div>
   </li>
@@ -34,10 +34,8 @@
     },
     methods: {
       deleteTodo () {
-        console.log('delete id ' + this.id)
         axios.delete('http://localhost:3000/todos/' + this.id, { withCredentials: true })
           .then(response => {
-            console.log(response)
             this.$emit('delete-todo')
           })
           .catch(e => {

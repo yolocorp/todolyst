@@ -6,6 +6,6 @@ module.exports = function(app, cors) {
         .post('/todos', todoList.create_todo);
 
     app.get('/todos/:id', todoList.get_todo)
-        .put('/todos/:id', todoList.update_todo)
+        .post('/todos/:id', todoList.update_todo)
         .delete('/todos/:id', todoList.delete_todo);
 };

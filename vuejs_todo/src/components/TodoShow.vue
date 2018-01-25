@@ -33,7 +33,6 @@
     created () {
       axios.get('http://localhost:3000/todos/' + this.$route.params.id, { withCredentials: true })
         .then(response => {
-          console.log(response.data)
           this.id = response.data.id
           this.task = response.data.task
           this.status = response.data.status

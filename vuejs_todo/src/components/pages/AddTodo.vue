@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3>Create todo</h3>
     <todoForm></todoForm>
   </div>
 </template>

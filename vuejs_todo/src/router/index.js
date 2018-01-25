@@ -10,13 +10,18 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/:page(\\d+)*',
       name: 'Home',
       component: Home
     },
     {
-      path: '/add-todo',
+      path: '/add-todo/',
       name: 'AddTodo',
+      component: AddTodo
+    },
+    {
+      path: '/update/:id(\\d+)*',
+      name: 'Update',
       component: AddTodo
     },
     {

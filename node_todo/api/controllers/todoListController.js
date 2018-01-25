@@ -1,11 +1,20 @@
 var Todo = require('../models/todoModel');
+var paginator = require('../utils/paginator');
 
 exports.list_todos = function(req, res) {
-    res.json(req.session.todos);
+    var page = req.query.page? parseInt(req.query.page) : null;
+    var perPage = req.query.per_page? parseInt(req.query.per_page) : null;
+    var todos = undefined;
+    if(page && perPage)
+        todos = paginator(req.session.todos, page, perPage);
+    else
+        todos = req.session.todos;
+
+    res.json(todos);
 };
 
 exports.create_todo = function(req, res) {
-    task = req.body.task? req.body.task : null;
+    var task = req.body.task? req.body.task : null;
     status = req.body.status? req.body.status : null;
     if(task && status) {
         req.session.todos.push(new Todo(task, status));

@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3>Todo details</h3>
     <todoShow></todoShow>
   </div>
 </template>
